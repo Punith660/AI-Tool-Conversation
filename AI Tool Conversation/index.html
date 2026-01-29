@@ -1,0 +1,584 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>PathAI Verify — Audit Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+  <meta name="color-scheme" content="dark" />
+</head>
+
+<body>
+  <!-- App Shell -->
+  <div class="app">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand__logo">P</div>
+        <div class="brand__text">
+          <div class="brand__name">PathAI</div>
+          <div class="brand__sub">Verify</div>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <a class="nav__item nav__item--active" href="#summary">
+          <span class="nav__dot"></span>
+          <span>Summary</span>
+        </a>
+        <a class="nav__item" href="#skills">
+          <span class="nav__dot"></span>
+          <span>Skills</span>
+        </a>
+        <a class="nav__item" href="#evidence">
+          <span class="nav__dot"></span>
+          <span>Evidence</span>
+        </a>
+        <a class="nav__item" href="#reports">
+          <span class="nav__dot"></span>
+          <span>Reports</span>
+        </a>
+
+        <div class="nav__divider"></div>
+
+        <a class="nav__item" href="#settings">
+          <span class="nav__dot"></span>
+          <span>Settings</span>
+        </a>
+        <a class="nav__item" href="#help">
+          <span class="nav__dot"></span>
+          <span>Help</span>
+        </a>
+      </nav>
+
+      <div class="sidebar__footer">
+        <div class="user">
+          <div class="user__avatar">HR</div>
+          <div class="user__meta">
+            <div class="user__name">Hiring Ops</div>
+            <div class="user__role">Enterprise</div>
+          </div>
+        </div>
+        <button class="btn btn--ghost w-full" type="button">New Verification</button>
+      </div>
+    </aside>
+
+    <!-- Main -->
+    <main class="main">
+
+      <!-- Topbar -->
+      <header class="topbar">
+        <div class="topbar__left">
+          <div class="kicker">Candidate</div>
+          <h1 class="title">Shaheer Rehman • Backend Developer</h1>
+          <div class="subtitle">Last run: Jan 29, 2026 • Sources: Resume, GitHub, LinkedIn</div>
+        </div>
+
+        <div class="topbar__right">
+          <div class="search">
+            <span class="search__icon">⌕</span>
+            <input class="search__input" placeholder="Search skills, claims, evidence…" />
+          </div>
+
+          <button class="btn btn--primary" type="button">Export PDF</button>
+          <button class="btn btn--secondary" type="button">Share</button>
+        </div>
+      </header>
+
+      <!-- Content -->
+      <section class="content">
+
+        <!-- SUMMARY -->
+        <section id="summary" class="section">
+          <div class="section__head">
+            <h2 class="section__title">Authenticity Summary</h2>
+            <div class="section__actions">
+              <span class="pill pill--muted">Run ID: VFY-10293</span>
+              <span class="pill pill--muted">Model: v1.6</span>
+            </div>
+          </div>
+
+          <div class="grid grid--3">
+            <!-- Overall Risk -->
+            <article class="card card--glow">
+              <div class="card__head">
+                <div class="card__label">Overall Risk</div>
+                <span class="pill pill--warn">Medium</span>
+              </div>
+              <div class="risk">
+                <div class="risk__meter">
+                  <div class="risk__bar" style="width: 62%"></div>
+                </div>
+                <div class="risk__meta">
+                  <div class="risk__value">62/100</div>
+                  <div class="risk__desc">Some claims need stronger evidence.</div>
+                </div>
+              </div>
+              <div class="card__foot">
+                <span class="muted">Primary drivers:</span>
+                <span class="chip chip--warn">Weak DevOps proof</span>
+                <span class="chip chip--warn">Buzzword density</span>
+              </div>
+            </article>
+
+            <!-- Authenticity Confidence -->
+            <article class="card">
+              <div class="card__head">
+                <div class="card__label">Authenticity Confidence</div>
+                <span class="pill pill--good">Good</span>
+              </div>
+
+              <div class="score">
+                <div class="score__ring" aria-hidden="true">
+                  <div class="score__ringInner">
+                    <div class="score__num">78</div>
+                    <div class="score__sub">/ 100</div>
+                  </div>
+                </div>
+                <div class="score__text">
+                  <div class="score__title">Consistent overall</div>
+                  <div class="score__desc">Projects align with role history; a few weak areas remain.</div>
+                </div>
+              </div>
+
+              <div class="mini">
+                <div class="mini__row">
+                  <span class="muted">Timeline consistency</span>
+                  <span class="pill pill--good">High</span>
+                </div>
+                <div class="mini__row">
+                  <span class="muted">AI-like phrasing</span>
+                  <span class="pill pill--warn">Moderate</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Evidence Coverage -->
+            <article class="card">
+              <div class="card__head">
+                <div class="card__label">Evidence Coverage</div>
+                <span class="pill pill--info">63%</span>
+              </div>
+
+              <div class="coverage">
+                <div class="coverage__bar">
+                  <div class="coverage__fill" style="width:63%"></div>
+                </div>
+                <div class="coverage__meta">
+                  <div><strong>63%</strong> of claims supported</div>
+                  <div class="muted">17 supported • 8 weak • 4 missing</div>
+                </div>
+              </div>
+
+              <div class="sources">
+                <div class="source">
+                  <div class="source__name">Resume</div>
+                  <div class="source__count">31 signals</div>
+                </div>
+                <div class="source">
+                  <div class="source__name">GitHub</div>
+                  <div class="source__count">19 signals</div>
+                </div>
+                <div class="source">
+                  <div class="source__name">LinkedIn</div>
+                  <div class="source__count">9 signals</div>
+                </div>
+                <div class="source source--muted">
+                  <div class="source__name">Portfolio</div>
+                  <div class="source__count">0 signals</div>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="grid grid--2 mt-16">
+            <!-- Top Findings -->
+            <article class="card">
+              <div class="card__head">
+                <div class="card__label">Top Findings</div>
+                <span class="pill pill--muted">Ranked</span>
+              </div>
+
+              <ol class="findings">
+                <li class="finding">
+                  <div class="finding__icon finding__icon--warn">!</div>
+                  <div class="finding__body">
+                    <div class="finding__title">Kubernetes claim looks inflated</div>
+                    <div class="finding__desc">Low commit/activity evidence; mostly mentions in resume.</div>
+                  </div>
+                  <span class="pill pill--warn">Weak</span>
+                </li>
+
+                <li class="finding">
+                  <div class="finding__icon finding__icon--bad">×</div>
+                  <div class="finding__body">
+                    <div class="finding__title">Missing evidence for “built CI/CD pipelines”</div>
+                    <div class="finding__desc">No workflow files or deployment artifacts found.</div>
+                  </div>
+                  <span class="pill pill--bad">Missing</span>
+                </li>
+
+                <li class="finding">
+                  <div class="finding__icon finding__icon--info">i</div>
+                  <div class="finding__body">
+                    <div class="finding__title">Projects align with backend role history</div>
+                    <div class="finding__desc">Repo language + architecture match stated stack.</div>
+                  </div>
+                  <span class="pill pill--good">Supported</span>
+                </li>
+              </ol>
+            </article>
+
+            <!-- Evidence Snapshot -->
+            <article class="card">
+              <div class="card__head">
+                <div class="card__label">Evidence Snapshot</div>
+                <div class="seg">
+                  <button class="seg__btn seg__btn--active" type="button">Signals</button>
+                  <button class="seg__btn" type="button">Gaps</button>
+                </div>
+              </div>
+
+              <div class="snapshot">
+                <div class="snapshot__row">
+                  <div class="snapshot__left">
+                    <div class="snapshot__title">Backend (Node/Express)</div>
+                    <div class="muted">APIs, auth, DB integration</div>
+                  </div>
+                  <div class="snapshot__right">
+                    <div class="bar">
+                      <div class="bar__fill" style="width:88%"></div>
+                    </div>
+                    <span class="pill pill--good">88%</span>
+                  </div>
+                </div>
+
+                <div class="snapshot__row">
+                  <div class="snapshot__left">
+                    <div class="snapshot__title">Databases (Postgres/Mongo)</div>
+                    <div class="muted">Schema usage + queries</div>
+                  </div>
+                  <div class="snapshot__right">
+                    <div class="bar">
+                      <div class="bar__fill" style="width:72%"></div>
+                    </div>
+                    <span class="pill pill--good">72%</span>
+                  </div>
+                </div>
+
+                <div class="snapshot__row">
+                  <div class="snapshot__left">
+                    <div class="snapshot__title">DevOps (Docker/K8s)</div>
+                    <div class="muted">Build/deploy artifacts</div>
+                  </div>
+                  <div class="snapshot__right">
+                    <div class="bar">
+                      <div class="bar__fill bar__fill--warn" style="width:41%"></div>
+                    </div>
+                    <span class="pill pill--warn">41%</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card__foot">
+                <button class="btn btn--secondary" type="button">View Evidence</button>
+                <button class="btn btn--ghost" type="button">Download Sources</button>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- SKILLS -->
+        <section id="skills" class="section">
+          <div class="section__head">
+            <h2 class="section__title">Skill Confidence Breakdown</h2>
+            <div class="filters">
+              <button class="filter filter--active" type="button">All</button>
+              <button class="filter" type="button">High risk</button>
+              <button class="filter" type="button">Missing evidence</button>
+              <button class="filter" type="button">Strong</button>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="tableTop">
+              <div class="tableTop__left">
+                <span class="pill pill--muted">34 skills</span>
+                <span class="muted">Sorted by risk</span>
+              </div>
+              <div class="tableTop__right">
+                <select class="select" aria-label="Category">
+                  <option>All categories</option>
+                  <option>Backend</option>
+                  <option>DevOps</option>
+                  <option>Security</option>
+                  <option>Data</option>
+                </select>
+                <select class="select" aria-label="Evidence">
+                  <option>Any evidence</option>
+                  <option>Missing</option>
+                  <option>Weak</option>
+                  <option>Strong</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="tableWrap">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>Skill</th>
+                    <th>Claimed</th>
+                    <th>Confidence</th>
+                    <th>Evidence</th>
+                    <th>Flags</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <div class="skillCell">
+                        <span class="tag">Node.js</span>
+                        <span class="muted">Backend</span>
+                      </div>
+                    </td>
+                    <td><span class="pill pill--muted">Advanced</span></td>
+                    <td>
+                      <div class="conf">
+                        <div class="conf__bar"><div class="conf__fill" style="width: 86%"></div></div>
+                        <span class="conf__num">86%</span>
+                      </div>
+                    </td>
+                    <td><span class="pill pill--info">12</span></td>
+                    <td>
+                      <span class="chip chip--good">Supported</span>
+                    </td>
+                    <td class="tdRight">
+                      <a class="btn btn--tiny btn--secondary" href="#drawer">Details</a>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      <div class="skillCell">
+                        <span class="tag">Kubernetes</span>
+                        <span class="muted">DevOps</span>
+                      </div>
+                    </td>
+                    <td><span class="pill pill--muted">Expert</span></td>
+                    <td>
+                      <div class="conf">
+                        <div class="conf__bar"><div class="conf__fill conf__fill--warn" style="width: 41%"></div></div>
+                        <span class="conf__num">41%</span>
+                      </div>
+                    </td>
+                    <td><span class="pill pill--info">1</span></td>
+                    <td>
+                      <span class="chip chip--warn">Buzzword-only</span>
+                      <span class="chip chip--warn">Weak proof</span>
+                    </td>
+                    <td class="tdRight">
+                      <a class="btn btn--tiny btn--secondary" href="#drawer">Details</a>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      <div class="skillCell">
+                        <span class="tag">CI/CD</span>
+                        <span class="muted">DevOps</span>
+                      </div>
+                    </td>
+                    <td><span class="pill pill--muted">Advanced</span></td>
+                    <td>
+                      <div class="conf">
+                        <div class="conf__bar"><div class="conf__fill conf__fill--bad" style="width: 22%"></div></div>
+                        <span class="conf__num">22%</span>
+                      </div>
+                    </td>
+                    <td><span class="pill pill--info">0</span></td>
+                    <td>
+                      <span class="chip chip--bad">Missing</span>
+                    </td>
+                    <td class="tdRight">
+                      <a class="btn btn--tiny btn--secondary" href="#drawer">Details</a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="card__foot">
+              <button class="btn btn--ghost" type="button">Load more</button>
+              <div class="muted">Tip: Click “Details” to open the explanation drawer.</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- EVIDENCE -->
+        <section id="evidence" class="section">
+          <div class="section__head">
+            <h2 class="section__title">Evidence & Audit</h2>
+            <div class="tabs">
+              <button class="tab tab--active" type="button">Claim Mapping</button>
+              <button class="tab" type="button">Audit Log</button>
+            </div>
+          </div>
+
+          <div class="grid grid--evidence">
+            <article class="card">
+              <div class="card__head">
+                <div class="card__label">Claims</div>
+                <span class="pill pill--muted">Sections</span>
+              </div>
+
+              <div class="claimList">
+                <button class="claim claim--active" type="button">
+                  <div class="claim__title">“Built CI/CD pipelines for 6 services”</div>
+                  <div class="claim__meta">
+                    <span class="pill pill--bad">Missing</span>
+                    <span class="muted">Work Experience</span>
+                  </div>
+                </button>
+
+                <button class="claim" type="button">
+                  <div class="claim__title">“Deployed apps on Kubernetes”</div>
+                  <div class="claim__meta">
+                    <span class="pill pill--warn">Weak</span>
+                    <span class="muted">Projects</span>
+                  </div>
+                </button>
+
+                <button class="claim" type="button">
+                  <div class="claim__title">“Designed REST APIs with auth + RBAC”</div>
+                  <div class="claim__meta">
+                    <span class="pill pill--good">Supported</span>
+                    <span class="muted">Projects</span>
+                  </div>
+                </button>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="card__head">
+                <div class="card__label">Claim → Evidence</div>
+                <span class="pill pill--muted">Explainable</span>
+              </div>
+
+              <div class="claimDetail">
+                <div class="claimDetail__top">
+                  <div>
+                    <div class="kicker">Selected claim</div>
+                    <div class="claimDetail__title">Built CI/CD pipelines for 6 services</div>
+                    <div class="muted">Status: <strong class="bad">Missing evidence</strong></div>
+                  </div>
+                  <div class="actions">
+                    <button class="btn btn--secondary" type="button">Request proof</button>
+                    <button class="btn btn--ghost" type="button">Mark reviewed</button>
+                  </div>
+                </div>
+
+                <div class="callout callout--bad">
+                  <div class="callout__title">Why this is missing</div>
+                  <ul class="list">
+                    <li>No GitHub Actions / CI config files detected.</li>
+                    <li>No deployment logs, screenshots, or pipeline artifacts linked.</li>
+                    <li>Resume contains only a single mention without detail.</li>
+                  </ul>
+                </div>
+
+                <div class="evidenceGrid">
+                  <div class="eCard eCard--empty">
+                    <div class="eCard__title">GitHub</div>
+                    <div class="muted">No workflow evidence found</div>
+                    <div class="eCard__foot">
+                      <span class="pill pill--bad">0 items</span>
+                    </div>
+                  </div>
+
+                  <div class="eCard">
+                    <div class="eCard__title">Resume Snippet</div>
+                    <div class="eCard__snippet">“Implemented CI/CD pipelines improving delivery speed…”</div>
+                    <div class="eCard__foot">
+                      <span class="pill pill--warn">Low weight</span>
+                      <button class="btn btn--tiny btn--ghost" type="button">Open</button>
+                    </div>
+                  </div>
+
+                  <div class="eCard">
+                    <div class="eCard__title">LinkedIn</div>
+                    <div class="eCard__snippet">Role description mentions “automation” but no links.</div>
+                    <div class="eCard__foot">
+                      <span class="pill pill--warn">Weak</span>
+                      <button class="btn btn--tiny btn--ghost" type="button">Open</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <footer class="footer">
+          <div class="muted">© 2026 PathAI Verify • Evidence-driven candidate verification</div>
+        </footer>
+      </section>
+    </main>
+
+    <!-- Right Drawer (CSS-only demo via :target) -->
+    <aside id="drawer" class="drawer">
+      <div class="drawer__overlay"></div>
+      <div class="drawer__panel" role="dialog" aria-label="Details Drawer">
+        <div class="drawer__head">
+          <div>
+            <div class="kicker">Skill Detail</div>
+            <div class="drawer__title">Kubernetes</div>
+            <div class="muted">Claimed: Expert • Confidence: 41%</div>
+          </div>
+          <a class="btn btn--tiny btn--ghost" href="#skills" aria-label="Close">Close</a>
+        </div>
+
+        <div class="drawer__body">
+          <div class="callout callout--warn">
+            <div class="callout__title">Why the score is low</div>
+            <ul class="list">
+              <li>Only 1 weak signal across scanned sources.</li>
+              <li>No manifests/helm charts in repositories.</li>
+              <li>High buzzword density in resume line item.</li>
+            </ul>
+          </div>
+
+          <div class="drawer__section">
+            <div class="drawer__sectionTitle">Top evidence</div>
+            <div class="eCard">
+              <div class="eCard__title">Resume mention</div>
+              <div class="eCard__snippet">“Deployed microservices on Kubernetes.”</div>
+              <div class="eCard__foot">
+                <span class="pill pill--warn">Low weight</span>
+                <button class="btn btn--tiny btn--ghost" type="button">Open</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="drawer__section">
+            <div class="drawer__sectionTitle">What would increase confidence</div>
+            <ul class="list">
+              <li>Repo with k8s manifests / Helm chart + commit history</li>
+              <li>CI pipeline showing build → deploy steps</li>
+              <li>Architecture diagram + environment screenshots</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="drawer__foot">
+          <button class="btn btn--primary" type="button">Add to report</button>
+          <button class="btn btn--secondary" type="button">Flag for review</button>
+        </div>
+      </div>
+    </aside>
+
+  </div>
+</body>
+</html>
